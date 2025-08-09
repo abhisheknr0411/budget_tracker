@@ -37,6 +37,7 @@
   "build": {
     "appId": "com.budget-tracker.app",
     "productName": "Budget Tracker",
+    "publish": "never",
     "files": [
       "dist/**/*",
       "electron.cjs",
