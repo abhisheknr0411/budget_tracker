@@ -7,7 +7,7 @@
     "dev": "vite",
     "start": "electron .",
     "build": "vite build",
-    "package": "electron-builder --win --x64 -c.extraMetadata.main=electron.cjs",
+    "package": "electron-builder -c.extraMetadata.main=electron.cjs",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
