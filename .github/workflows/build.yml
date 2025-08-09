@@ -2,7 +2,7 @@ name: Build Desktop App
 
 on:
   push:
-    branches: ["main"]
+    branches: ["mac_branch"]
 
 jobs:
   build:
