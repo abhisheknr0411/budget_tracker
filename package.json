@@ -1,20 +1,23 @@
 {
   "name": "budget-tracker",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
+  "main": "electron.cjs",
+  "homepage": "./",
   "scripts": {
     "dev": "vite",
     "start": "electron .",
     "build": "vite build",
-    "package": "electron-builder -c.extraMetadata.main=electron.cjs",
+    "package": "electron-builder --publish never",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
   "dependencies": {
     "chart.js": "^4.4.3",
+    "firebase": "^10.12.2",
     "html2canvas": "^1.4.1",
-    "jspdf": "^3.0.1",
+    "jspdf": "^2.5.1",
     "react": "^18.3.1",
     "react-chartjs-2": "^5.2.0",
     "react-dom": "^18.3.1"
@@ -24,8 +27,8 @@
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.1",
     "autoprefixer": "^10.4.19",
-    "electron": "^37.2.6",
-    "electron-builder": "^26.0.12",
+    "electron": "^31.0.2",
+    "electron-builder": "^24.13.3",
     "eslint": "^8.57.0",
     "eslint-plugin-react": "^7.34.2",
     "eslint-plugin-react-hooks": "^4.6.2",
@@ -37,7 +40,6 @@
   "build": {
     "appId": "com.budget-tracker.app",
     "productName": "Budget Tracker",
-    "publish": "never",
     "files": [
       "dist/**/*",
       "electron.cjs",
@@ -47,10 +49,10 @@
       "output": "release"
     },
     "win": {
-      "icon": "icon/icon.png"
+      "icon": "build/icon.png"
     },
     "mac": {
-      "icon": "icon/icon.png"
+      "icon": "build/icon.png"
     }
   }
 }
